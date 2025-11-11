@@ -22,6 +22,27 @@ To write and execute an Assembly Language Program for sorting data in Ascending 
 ## Program (Ascending order)
 
 ```asm
+ ORG 0000H
+ LOOP1:
+    MOV R0, #40H       
+    MOV R6, #30H       
+    DEC R6
+ LOOP:
+    MOV A, @R0
+    INC R0
+    MOV B, @R0
+    CJNE A, B, NEXT
+ NEXT:
+    JNC DOWN           
+    MOV @R0, A         
+    DEC R0
+    MOV @R0, B
+    INC R0
+ DOWN:
+    DJNZ R6, LOOP
+    MOV R1, #02H
+    DJNZ R1, LOOP1
+ END
 
 
 
@@ -29,7 +50,7 @@ To write and execute an Assembly Language Program for sorting data in Ascending 
 ```
 ## OUTPUT(Ascending order)
 
-
+https://private-user-images.githubusercontent.com/211930463/510803282-4562c721-97e8-4138-869b-83bbc4b9b399.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjI0Mzc5NDYsIm5iZiI6MTc2MjQzNzY0NiwicGF0aCI6Ii8yMTE5MzA0NjMvNTEwODAzMjgyLTQ1NjJjNzIxLTk3ZTgtNDEzOC04NjliLTgzYmJjNGI5YjM5OS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMTA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTEwNlQxNDAwNDZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kNGI3YTgyNTNmNDVmNTBmNjZhNDRlNzkyM2YzY2NkNWU0NzIxNzU3YTI2NjQxMTgwMGFhOWFhZGEwMjcyNjgxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.fmjvUV7hPD96tUb8oNrq5L0oKUYZcIOQKyoVqjfoZWA
 
 ---
 
@@ -50,12 +71,33 @@ To write and execute an Assembly Language Program for sorting data in Ascending 
 ```asm
 
 
+ ORG 0000H
+ LOOP1:  
+    MOV R0, #40H      
+    MOV R6, #0AH      
+    DEC R6            
+LOOP:  
+    MOV A, @R0         
+    INC R0  
+    MOV B, @R0         
+    CJNE A, B, NEXT    
+NEXT:  
+    JNC DOWN           
+    MOV @R0, A         
+    DEC R0
+    MOV @R0, B
+    INC R0
+ DOWN:  
+    DJNZ R6, LOOP      
+    MOV R1, #02H       
+    DJNZ R1, LOOP1
+ END
 
 
 ```
 ## OUTPUT(Descending order)
 
-
+https://private-user-images.githubusercontent.com/211930463/510803846-8b7bb322-5d27-426b-b77c-0a936e5daa5b.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjI0Mzc5NDYsIm5iZiI6MTc2MjQzNzY0NiwicGF0aCI6Ii8yMTE5MzA0NjMvNTEwODAzODQ2LThiN2JiMzIyLTVkMjctNDI2Yi1iNzdjLTBhOTM2ZTVkYWE1Yi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMTA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTEwNlQxNDAwNDZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05OTA3ZDYwZWFjMzNlZDMwNWRlZDdkMTcwODYyNWRkNDExYTU1ZmZhNTY1ZmE3YmFhN2JhYjczMzRhYTZlMzU3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Zxfh9u6jSOPLDD4CPMUrqMH0GbxrDTqItmU5lmqmFeA
 
 ---
 ## RESULT:
