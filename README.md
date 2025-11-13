@@ -50,8 +50,8 @@ To write and execute an Assembly Language Program for sorting data in Ascending 
 ```
 ## OUTPUT(Ascending order)
 
+![WhatsApp Image 2025-11-13 at 08 06 38_5f30f9f5](https://github.com/user-attachments/assets/966f1160-5d41-4978-afbe-e182fcc55d91)
 
-<img width="466" height="363" alt="image" src="https://github.com/user-attachments/assets/a002f903-d1a1-4221-ba7c-2f75f0e69d2a" />
 
 
 ---
@@ -99,7 +99,7 @@ NEXT:
 ```
 ## OUTPUT(Descending order)
 
-<img width="464" height="402" alt="image" src="https://github.com/user-attachments/assets/f8f4a69f-f5fb-4c4d-9c1b-717f1a9795d8" />
+![WhatsApp Image 2025-11-13 at 08 06 39_359168b4](https://github.com/user-attachments/assets/199610bf-cd0b-4ad0-b503-a1d8fee6d0a1)
 
 
 ---
